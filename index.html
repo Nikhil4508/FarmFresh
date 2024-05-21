@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FarmFresh</title>
+  <script src="https://kit.fontawesome.com/3ed447aaf0.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./assets/styles/copy.css">
+</head>
+<body>
+  <main >
+
+    <header>
+        <div class="header-logo">
+          <a href="index.html"><img src="./assets/images/grocery logo.png" alt="">Farmfresh</a>
+        </div>
+
+        <ul class="quick-links">
+          <li><a class="quick-items active" href="#hero">Home</a></li>
+          <li><a  class="quick-items" href="#shop">Shop</a></li>
+          <li><a  class="quick-items" href="#about">About</a></li>
+          <li><a  class="quick-items" href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="header-cart"> 
+            <a href="#heart" class="desk-link"><i class="fas fa-heart"></i></a>
+            <a href="#profile"  class="desk-link"><i class="fas fa-user"></i></a>
+            <span class="icon-cart">
+                <a href="#cart"><i  id="openCart" class="fas fa-shopping-bag"></i></a>
+                <a class="mobile-menu "><i class="fas fa-bars"></i></a>
+          </span> 
+        </div>
+    </header>
+<!-- mobile navbar view -->
+    <div class="mobile-nav">
+        <span class="mobile-menu-close" style="font-size: 40px;"><i class="fas fa-multiply"></i></span>
+        <ul class="mob-links">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="#slide-container">Shop</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+<!-- mobile navbar view -->
+
+    <section class="hero" id="hero">
+        <div class="hero-wrapper">
+          <div class="text-column">
+            <div class="text-content">
+              <h2 class="heading">Harvesting With Delight, Delivered With Care
+              </h2>
+              <p class="description">
+                we're committed to quality from farm to table.Each product meets our rigorous standards for taste, freshness,and sustainability. With us, you're not just buying vegetables — you're enjoying a journey of flavor and  nourishment, straight from our garden to your table.
+              </p>
+              <button class="cta-button">Shop Now</button>
+            </div>
+          </div>
+          <div class="image-column">
+            <img class="main-image" src="https://cdn.builder.io/api/v1/image/assets/TEMP/b67b6ea4735fae357ef5f37428987374bef89838e608393d74641fae35a94657?apiKey=3301d61276f842b39f646fce5f32fe46&" alt="Harvested vegetables">
+          </div>
+        </div>
+    </section>
+
+    <section class="offer-section">
+        <div class="offerslider">
+          <div class="slideimg">
+          <img src="./assets/images/banner11.jpg" alt="Image 1" >
+          </div>
+          <div class="slideimg">
+          <img src="./assets/images/banner12.jpg" alt="Image 2">
+          </div>
+          <div class="slideimg">
+          <img src="./assets/images/banner13.png" alt="Image 3">
+          </div>
+          <div class="slideimg">
+          <img src="./assets/images/banner14(1).png" alt="Image 4">
+          </div>
+        </div>
+          <button class="offer-prev"> < </button>
+          <button class="offer-next"> > </button>
+    </section>
+
+    <!-- cart -->
+    <div class="cart"  id="cart">
+        <i class="fas fa-multiply" id="closeCart" style="font-size: 26px;"></i>
+        <div class="tittle">Your Cart</div>
+        <div id="tittle"></div>
+        <div class="cart-btn">
+            <button  id="closeToCart">Close</button>
+            <button class="checkout">Checkout</button>
+        </div>
+    </div>
+    <!--  cart -->
+
+    <section class="product-section" id="shop">
+     
+        <div class="slide-container" id="slide-container">
+    
+            <div class="product-header">
+                <div class="filter-box">
+                    <a href="#" class="btn active" data-filter="all">All</a>
+                    <a href="#" class="btn" data-filter="vegetables">Vegetables</a>
+                    <a href="#" class="btn" data-filter="root_vegetables">Root Vegetables</a>
+                    <a href="#" class="btn" data-filter="fruits">Fruits</a>
+                </div>
+                <!-- Search box -->
+                <div class="search-box">
+                    <form action="" onsubmit="return false">
+                        <input type="text" id="search" placeholder="Search Product">
+                        <i class="fa fa-search"></i>
+                    </form>
+                </div>
+            </div>
+    
+        <section class="container" id="store-products">
+        
+
+        <div class=" store-product vegetables" >
+            <div class=" product-details  " id="item1">
+                <img class="img" src="./assets/images/vegetables/Bitter Melon.jpg" >
+                <div Class="tittle">Bitter Melon</div>  
+                <p><span>₹100</span> ₹80</p>
+    
+                <div class="qty">
+                    <div class="dropdown" >
+                        <div class="select" id="quantityDropdown1">
+                            <span class="selected">250gm | ₹20</span>
+                            <div class="caret"></div>
+                        </div>
+                        <ul class="menu" id="quantityOptions1">
+                            <li class="active"  data-quantity="250">250gm | ₹20</li>
+                            <li data-quantity="500">500gm | ₹40</li>
+                            <li data-quantity="1000">1kg | ₹80</li>
+                        </ul>
+                    </div>
+                    <button onclick=" addToCart(item1)"><i class="fas fa-shopping-cart"></i></button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="store-product fruits">
+            <div class="product-details" id="item2">
+                <img src="./assets/images/fruits/apple.jpg" alt="">
+                <div Class="tittle">Apple</div>
+                <p> <span>₹200</span> ₹160</p>
+                <div class="qty">
+                    <div class="dropdown">
+                        <div class="select">
+                            <span class="selected">250gm | ₹20</span>
+                            <div class="caret"></div>
+                        </div>
+                        <ul class="menu">
+                            <li class="active">250gm | ₹20</li>
+                            <li>500gm | ₹40</li>
+                            <li>1kg | ₹80</li>
+                        </ul>
+                    </div>
+                    <button onclick=" addToCart(item2)"><i class="fas fa-shopping-cart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="store-product root_vegetables">
+            <div class="product-details" id="item3">
+                <img src="./assets/images/root vegetables/Onion.jpg" alt="">
+                <div Class="tittle">Onion</div>
+                <p> <span>₹30</span> ₹20</p>
+                <div class="qty">
+                    <div class="dropdown">
+                        <div class="select">
+                            <span class="selected">250gm | ₹20</span>
+                            <div class="caret"></div>
+                        </div>
+                        <ul class="menu">
+                            <li class="active">250gm | ₹20</li>
+                            <li>500gm | ₹40</li>
+                            <li>1kg | ₹80</li>
+                        </ul>
+                    </div>
+                    <button onclick=" addToCart(item3)"><i class="fas fa-shopping-cart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="store-product vegetables">
+            <div class="product-details" id="item4">
+                <img src="./assets/images/vegetables/Bringal.jpg" alt="">
+                <div Class="tittle">Bringal</div>
+                <p> <span>₹30</span> ₹25</p>
+                <div class="qty">
+                    <div class="dropdown">
+                        <div class="select">
+                            <span class="selected">250gm | ₹20</span>
+                            <div class="caret"></div>
+                        </div>
+                        <ul class="menu">
+                            <li class="active">250gm | ₹20</li>
+                            <li>500gm | ₹40</li>
+                            <li>1kg | ₹80</li>
+                        </ul>
+                    </div>
+                    <button onclick=" addToCart(item4)"><i class="fas fa-shopping-cart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="store-product root_vegetables">
+            <div class="product-details" id="item5">
+                <img src="./assets/images/root vegetables/Organic Red Beet.jpg" alt="">
+                <div Class="tittle">Red Beetroot</div>
+                <p> <span>₹40</span> ₹35</p>
+    
+                <div class="qty">
+                    <div class="dropdown">
+                        <div class="select">
+                            <span class="selected">250gm | ₹20</span>
+                            <div class="caret"></div>
+                        </div>
+                        <ul class="menu">
+                            <li class="active">250gm | ₹20</li>
+                            <li>500gm | ₹40</li>
+                            <li>1kg | ₹80</li>
+                        </ul>
+                    </div>
+                    <button onclick=" addToCart(item5)"><i class="fas fa-shopping-cart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="store-product fruits">
+            <div class="product-details" id="item6">
+                <img src="./assets/images/fruits/Banana.png" alt="">
+                <div Class="tittle">Banana</div>
+                <p> <span>₹70</span> ₹50</p>
+                <div class="qty">
+                    <div class="dropdown">
+                        <div class="select">
+                            <span class="selected">250gm | ₹20</span>
+                            <div class="caret"></div>
+                        </div>
+                        <ul class="menu">
+                            <li class="active">250gm | ₹20</li>
+                            <li>500gm | ₹40</li>
+                            <li>1kg | ₹80</li>
+                        </ul>
+                    </div>
+                   <button onclick=" addToCart(item6)"><i class="fas fa-shopping-cart"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="store-product vegetables">
+            <div class="product-details" id="item7">
+                <img src="./assets/images/vegetables/Capsicum.jpg" alt="">
+                <div Class="tittle">Capsicum</div>
+                <p> <span>₹40</span> ₹32</p>
+                <div class="qty">
+                    <div class="dropdown">
+                        <div class="select">
+                            <span class="selected">250gm | ₹20</span>
+                            <div class="caret"></div>
+                        </div>
+                        <ul class="menu">
+                            <li class="active">250gm | ₹20</li>
+                            <li>500gm | ₹40</li>
+                            <li>1kg | ₹80</li>
+                        </ul>
+                    </div>
+                   <button onclick=" addToCart(item7)"><i class="fas fa-shopping-cart"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="store-product fruits">
+            <div class="product-details" id="item8">
+                <img src="./assets/images/fruits/Blue Plums.png" alt="">
+                <div Class="tittle">Blue Plums</div>
+                <p> <span>₹80</span> ₹75</p>
+                <div class="qty">
+                    <div class="dropdown">
+                        <div class="select">
+                            <span class="selected">250gm | ₹20</span>
+                            <div class="caret"></div>
+                        </div>
+                        <ul class="menu">
+                            <li class="active">250gm | ₹20</li>
+                            <li>500gm | ₹40</li>
+                            <li>1kg | ₹80</li>
+                        </ul>
+                    </div>
+                   <button onclick=" addToCart(item8)"><i class="fas fa-shopping-cart"></i></button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="store-product root_vegetables">
+            <div class="product-details" id="item9">
+                <img src="./assets/images/root vegetables/Potatoes.jpg" alt="">
+                <div Class="tittle">Potatoes</div>
+                <p> <span>₹50</span> ₹40</p>
+                <div class="qty">
+                    <div class="dropdown">
+                        <div class="select">
+                            <span class="selected">250gm | ₹20</span>
+                            <div class="caret"></div>
+                        </div>
+                        <ul class="menu">
+                            <li class="active">250gm | ₹20</li>
+                            <li>500gm | ₹40</li>
+                            <li>1kg | ₹80</li>
+                        </ul>
+                    </div>
+                   <button onclick=" addToCart(item9)"><i class="fas fa-shopping-cart"></i></button>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="store-product vegetables">
+            <div class="product-details" id="item10">
+                <img src="./assets/images/vegetables/Cauliflower.jpg" alt="">
+                <div Class="tittle">Cauliflower</div>
+                <p> <span>₹30</span> ₹25</p>
+                <div class="qty">
+                    <div class="dropdown">
+                        <div class="select">
+                            <span class="selected">250gm | ₹20</span>
+                            <div class="caret"></div>
+                        </div>
+                        <ul class="menu">
+                            <li class="active">250gm | ₹20</li>
+                            <li>500gm | ₹40</li>
+                            <li>1kg | ₹80</li>
+                        </ul>
+                    </div>
+                   <button onclick=" addToCart(item10)"><i class="fas fa-shopping-cart"></i></button>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="store-product fruits">
+            <div class="product-details" id="item11">
+                <img src="./assets/images/fruits/Custard apple.jpg" alt="">
+                <div Class="tittle">Custard apple</div>
+                <p> <span>₹100</span> ₹90</p>
+                <div class="qty">
+                    <div class="dropdown">
+                        <div class="select">
+                            <span class="selected">250gm | ₹20</span>
+                            <div class="caret"></div>
+                        </div>
+                        <ul class="menu">
+                            <li class="active">250gm | ₹20</li>
+                            <li>500gm | ₹40</li>
+                            <li>1kg | ₹80</li>
+                        </ul>
+                    </div>
+                   <button onclick=" addToCart(item11)"><i class="fas fa-shopping-cart"></i></button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="store-product root_vegetables">
+            <div class="product-details" id="item12">
+                <img src="./assets/images/root vegetables/Red Radish.jpg" alt="">
+                <div Class="tittle">Red Radish</div>
+                <p> <span>₹40</span> ₹28</p>
+                <div class="qty">
+                    <div class="dropdown">
+                        <div class="select">
+                            <span class="selected">250gm | ₹20</span>
+                            <div class="caret"></div>
+                        </div>
+                        <ul class="menu">
+                            <li class="active">250gm | ₹20</li>
+                            <li>500gm | ₹40</li>
+                            <li>1kg | ₹80</li>
+                        </ul>
+                    </div>
+                   <button onclick=" addToCart(item12)"><i class="fas fa-shopping-cart"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="store-product fruits">
+            <div class="product-details" id="item13">
+                <img src="./assets/images/fruits/Essence of Dreams.jpg" alt="">
+                <div Class="tittle">Pomogrenate</div>
+                <p> <span>₹140</span> ₹135</p>
+                <div class="qty">
+                    <div class="dropdown">
+                        <div class="select">
+                            <span class="selected">250gm | ₹20</span>
+                            <div class="caret"></div>
+                        </div>
+                        <ul class="menu">
+                            <li class="active">250gm | ₹20</li>
+                            <li>500gm | ₹40</li>
+                            <li>1kg | ₹80</li>
+                        </ul>
+                    </div>
+                   <button onclick=" addToCart(item13)"><i class="fas fa-shopping-cart"></i></button>
+                </div>
+            </div>
+        </div>
+    
+        
+        <div class="store-product vegetables">
+            <div class="product-details" id="item14">
+                <img src="./assets/images/vegetables/Chilli.jpg" alt="">
+                <div Class="tittle">Chilli</div>
+                <p> <span>₹90</span> ₹80</p>
+                <div class="qty">
+                    <div class="dropdown">
+                        <div class="select">
+                            <span class="selected">250gm | ₹20</span>
+                            <div class="caret"></div>
+                        </div>
+                        <ul class="menu">
+                            <li class="active">250gm | ₹20</li>
+                            <li>500gm | ₹40</li>
+                            <li>1kg | ₹80</li>
+                        </ul>
+                    </div>
+                   <button onclick=" addToCart(item14)"><i class="fas fa-shopping-cart"></i></button>
+                </div>
+            </div>
+        </div>
+        
+    
+        <div class="store-product root_vegetables">
+            <div class="product-details" id="item15">
+                <img src="./assets/images/root vegetables/Sweet Potatoes.jpg" alt="">
+                <div Class="tittle">Sweet Potatoes</div>
+                <p> <span>₹60</span> ₹45</p>
+                <div class="qty">
+                    <div class="dropdown">
+                        <div class="select">
+                            <span class="selected">250gm | ₹20</span>
+                            <div class="caret"></div>
+                        </div>
+                        <ul class="menu">
+                            <li class="active">250gm | ₹20</li>
+                            <li>500gm | ₹40</li>
+                            <li>1kg | ₹80</li>
+                        </ul>
+                    </div>
+                   <button onclick=" addToCart(item15)"><i class="fas fa-shopping-cart"></i></button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="store-product fruits">
+            <div class="product-details" id="item16">
+                <img src="./assets/images/fruits/Figs.png" alt="">
+                <div Class="tittle">Figs</div>
+                <p> <span>₹150</span> ₹135</p>
+                <div class="qty">
+                    <div class="dropdown">
+                        <div class="select">
+                            <span class="selected">250gm | ₹20</span>
+                            <div class="caret"></div>
+                        </div>
+                        <ul class="menu">
+                            <li class="active">250gm | ₹20</li>
+                            <li>500gm | ₹40</li>
+                            <li>1kg | ₹80</li>
+                        </ul>
+                    </div>
+                   <button onclick=" addToCart(item16)"><i class="fas fa-shopping-cart"></i></button>
+                </div>
+            </div>
+        </div>
+    
+        
+        <div class="store-product vegetables">
+            <div class="product-details" id="item17">
+                <img src="./assets/images/vegetables/Cucumber.jpg" alt="">
+                <div Class="tittle">Cucumber</div>
+                <p> <span>₹40</span> ₹32</p>
+                <div class="qty">
+                    <div class="dropdown">
+                        <div class="select">
+                            <span class="selected">250gm | ₹20</span>
+                            <div class="caret"></div>
+                        </div>
+                        <ul class="menu">
+                            <li class="active">250gm | ₹20</li>
+                            <li>500gm | ₹40</li>
+                            <li>1kg | ₹80</li>
+                        </ul>
+                    </div>
+                   <button onclick=" addToCart(item17)"><i class="fas fa-shopping-cart"></i></button>
+                </div>
+            </div>
+        </div>
+    
+        
+        <div class="store-product root_vegetables">
+            <div class="product-details" id="item18">
+                <img src="./assets/images/root vegetables/White Radish.jpg" alt="">
+                <div Class="tittle">White Radish</div>
+                <p> <span>₹30</span> ₹25</p>
+                <div class="qty">
+                    <div class="dropdown">
+                        <div class="select">
+                            <span class="selected">250gm | ₹20</span>
+                            <div class="caret"></div>
+                        </div>
+                        <ul class="menu">
+                            <li class="active">250gm | ₹20</li>
+                            <li>500gm | ₹40</li>
+                            <li>1kg | ₹80</li>
+                        </ul>
+                    </div>
+                   <button onclick=" addToCart(item18)"><i class="fas fa-shopping-cart"></i></button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="store-product fruits">
+            <div class="product-details" id="item19">
+                <img src="./assets/images/fruits/Gauva.jpg" alt="">
+                <div Class="tittle">Gauva</div>
+                <p> <span>₹120</span> ₹110</p>
+                <div class="qty">
+                    <div class="dropdown">
+                        <div class="select">
+                            <span class="selected">250gm | ₹20</span>
+                            <div class="caret"></div>
+                        </div>
+                        <ul class="menu">
+                            <li class="active">250gm | ₹20</li>
+                            <li>500gm | ₹40</li>
+                            <li>1kg | ₹80</li>
+                        </ul>
+                    </div>
+                   <button onclick=" addToCart(item19)"><i class="fas fa-shopping-cart"></i></button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="store-product vegetables">
+            <div class="product-details" id="item20">
+                <img src="./assets/images/vegetables/Drumstick.jpg" alt="">
+                <div Class="tittle">Drumstick</div>
+                <p> <span>₹70</span> ₹60</p>
+                <div class="qty">
+                    <div class="dropdown">
+                        <div class="select">
+                            <span class="selected">250gm | ₹20</span>
+                            <div class="caret"></div>
+                        </div>
+                        <ul class="menu">
+                            <li class="active">250gm | ₹20</li>
+                            <li>500gm | ₹40</li>
+                            <li>1kg | ₹80</li>
+                        </ul>
+                    </div>
+                   <button onclick=" addToCart(item20)"><i class="fas fa-shopping-cart"></i></button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="store-product fruits">
+            <div class="product-details" id="item21">
+                <img src="./assets/images/fruits/Grapes.jpg" alt="">
+                <div Class="tittle">Grapes</div>
+                <p> <span>₹70</span> ₹60</p>
+                <div class="qty">
+                    <div class="dropdown">
+                        <div class="select">
+                            <span class="selected">250gm | ₹20</span>
+                            <div class="caret"></div>
+                        </div>
+                        <ul class="menu">
+                            <li class="active">250gm | ₹20</li>
+                            <li>500gm | ₹40</li>
+                            <li>1kg | ₹80</li>
+                        </ul>
+                    </div>
+                   <button onclick=" addToCart(item21)"><i class="fas fa-shopping-cart"></i></button>
+                </div>
+            </div>
+        </div>
+        
+    
+        <div class="store-product vegetables">
+            <div class="product-details" id="item22">
+                <img src="./assets/images/vegetables/Espinacas - Copy.jpg" alt="">
+                <div Class="tittle">Espinacas</div>
+                <p> <span>₹30</span> ₹25</p>
+                <div class="qty">
+                    <div class="dropdown">
+                        <div class="select">
+                            <span class="selected">250gm | ₹20</span>
+                            <div class="caret"></div>
+                        </div>
+                        <ul class="menu">
+                            <li class="active">250gm | ₹20</li>
+                            <li>500gm | ₹40</li>
+                            <li>1kg | ₹80</li>
+                        </ul>
+                    </div>
+                   <button onclick=" addToCart(item22)"><i class="fas fa-shopping-cart"></i></button>
+                </div>
+            </div>
+        </div>
+       
+    
+        <div class="store-product fruits">
+            <div class="product-details" id="item23">
+                <img src="./assets/images/fruits/kiwi.jpg" alt="">
+                <div Class="tittle">kiwi</div>  
+                <p> <span>₹200</span> ₹160</p>
+                <div class="qty">
+                    <div class="dropdown">
+                        <div class="select">
+                            <span class="selected">250gm | ₹20</span>
+                            <div class="caret"></div>
+                        </div>
+                        <ul class="menu">
+                            <li class="active">250gm | ₹20</li>
+                            <li>500gm | ₹40</li>
+                            <li>1kg | ₹80</li>
+                        </ul>
+                    </div>
+                    <button onclick=" addToCart(item23)"><i class="fas fa-shopping-cart"></i></button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="store-product vegetables">
+            <div class="product-details" id="item24">
+                <img src="./assets/images/vegetables/Fenugreek leaves.jpg" alt="">
+                <div Class="tittle">coriander</div>  
+                <p> <span>₹25</span> ₹20</p>
+                <div class="qty">
+                    <div class="dropdown">
+                        <div class="select">
+                            <span class="selected">250gm | ₹20</span>
+                            <div class="caret"></div>
+                        </div>
+                        <ul class="menu">
+                            <li class="active">250gm | ₹20</li>
+                            <li>500gm | ₹40</li>
+                            <li>1kg | ₹80</li>
+                        </ul>
+                    </div>
+                    <button onclick=" addToCart(item24)"><i class="fas fa-shopping-cart"></i></button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="store-product fruits">
+            <div class="product-details" id="item25">
+                <img src="./assets/images/fruits/melon.jpg" alt="">
+                <div Class="tittle">melon</div>  
+                <p> <span>₹35</span> ₹30</p>
+                <div class="qty">
+                    <div class="dropdown">
+                        <div class="select">
+                            <span class="selected">250gm | ₹20</span>
+                            <div class="caret"></div>
+                        </div>
+                        <ul class="menu">
+                            <li class="active">250gm | ₹20</li>
+                            <li>500gm | ₹40</li>
+                            <li>1kg | ₹80</li>
+                        </ul>
+                    </div>
+                    <button onclick=" addToCart(item25)"><i class="fas fa-shopping-cart"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+  </div>
+    </section>
+
+    <section class="review-section">
+        <div class="card">
+          <div class="card-profile"> <img src="./assets/images/Diversity Avatar-5.png" alt="">  </div>
+          <div class="card-name"><h2>Alex</h2></div>
+          <div class="card-description"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae, dolore?</p>
+          </div>
+          <div class="card-rating">
+            <img src="./assets/images/icons8-star-50 (1).png" alt="">
+            <img src="./assets/images/icons8-star-50 (1).png" alt="">
+            <img src="./assets/images/icons8-star-50 (1).png" alt="">
+            <img src="./assets/images/icons8-star-50 (1).png" alt="">
+            <img src="./assets/images/icons8-star-half-empty-50.png" alt="">
+          </div>
+        </div>
+        <div class="card">
+            <div class="card-profile"> <img src="./assets/images/Diversity Avatar-3.png" alt="">  </div>
+            <div class="card-name"><h2>Emma</h2></div>
+            <div class="card-description"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae, dolore?</p></div>
+            <div class="card-rating">
+                <img src="./assets/images/icons8-star-50 (1).png" alt="">
+                <img src="./assets/images/icons8-star-50 (1).png" alt="">
+                <img src="./assets/images/icons8-star-50 (1).png" alt="">
+                <img src="./assets/images/icons8-star-half-empty-50.png" alt="">
+                <img src="./assets/images/icons8-star-50.png" alt="">
+            </div>
+          </div>
+
+      <div class="card">
+            <div class="card-profile"> <img src="./assets/images/Diversity Avatar-6.png" alt="">  </div>
+            <div class="card-name"><h2>Sam</h2></div>
+            <div class="card-description"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae, dolore?</p></div>
+            <div class="card-rating">
+                <img src="./assets/images/icons8-star-50 (1).png" alt="">
+                <img src="./assets/images/icons8-star-50 (1).png" alt="">
+                <img src="./assets/images/icons8-star-50 (1).png" alt="">
+                <img src="./assets/images/icons8-star-50 (1).png" alt="">
+                <img src="./assets/images/icons8-star-50 (1).png" alt="">
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <section class="about-section" id="about">
+        <div class="about-wrapper">
+            <h2 class="about-heading">About Us</h2>
+            <h1 class="web-heading">Welcome to FramFresh</h1>
+            <p class="about-para"><span id="para-heading">FramFresh</span> is a simple e-commerce website that allows users to browse and purchase products online. Our website features a clean and intuitive design, making it easy for users to find and buy the products they need.</p>
+
+            <h3 class="subHeadings">Features:</h3>
+            <p class="about-para">
+            Product Browse :- Browse our collection of products, each with a detailed description,    price, and image. <br>
+            Add to Cart :- Easily add products to your cart with a single click. <br>
+            View Cart :- View the contents of your cart, including the quantity and total price of each item. <br>
+            Custom Quantity :- Select a custom quantity for each product before adding it to your cart. <br>
+            </p>
+
+            <h3 class="subHeadings">Future Development:</h3>
+            <p class="about-para">
+                Payment Gateway Integration:- We plan to integrate a payment gateway to allow users to securely checkout and pay for their orders. <br>
+                User Accounts:- We plan to add user account functionality, allowing users to save their cart contents and order history. <br>
+                More Products:- We plan to add more products to our catalog, including new categories and brands.I hope this description helps! Let me know if you have any other questions or need further assistance. <br>
+            </p>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+    
+        <div class="contact-wrapper" >
+            <form  action="https://api.web3forms.com/submit " method="POST" id="form">
+                <h2 class="contact-heading">Get in touch</h2>
+                <input type="hidden" name="access_key" value="afc53960-f4e8-42d9-9884-f5f99bbe278d">
+                <input type="text" name="name" id="username" placeholder="Your Name" class="contact-inputs" required>
+                <input type="email" name="email" id="email" placeholder="Your Email" class="contact-inputs" required>
+                <textarea name="message" id="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+                <button type="submit" id="subBtn">Submit</button>
+                
+            
+            </form>
+        </div>
+
+
+    </section>
+
+    <section class="footer-section">
+
+        <div class="footer-logo">
+            <h1>FarmFresh</h1>
+            <img src="./assets/images/grocery logo.png" alt="">
+        </div>
+
+        <div class="footer-shop">
+            <h2>Shop</h2>
+            <a href="">Home</a>
+            <a href="">Categories</a>
+            <a href="">Offers</a>
+            <a href="">Reviews</a>
+        </div>
+
+        <div class="footer-myaccount">
+            <h2>My Account</h2>
+            <a href="">Sign in</a>
+            <a href="">My Cart</a>
+            <a href="">My Wishlist</a>
+        </div>
+
+        <div class="footer-support">
+            <h2>Support</h2>
+            <a href="">Contact</a>
+            <a href="">FAQ</a>
+            <a href="">Privacy policy</a>
+        </div>
+    </section>
+
+
+    </main>
+<script src="./assets/script/copy.js" ></script>
+</body>
+</html>
